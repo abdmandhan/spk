@@ -2,32 +2,44 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import Dashboard from './components/DashboardComponent';
-import Users from './components/Users/UsersComponent';
+import Spk from './components/spk/SpkComponent';
+import SpkShow from './components/spk/SpkShowComponent';
+import Layout from './components/LayoutComponent';
+import Login from './components/auth/LoginComponent';
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    base: 'spkApp/public/v',
+    base: '/v/',
     mode: 'history',
-    routes:[
+    routes: [
         {
-            path: '/dashboard',
-            name: 'dashboard',
-            component: Dashboard
+            path: '/',
+            redirect: '/dashboard',
+            component: Layout,
+            children: [
+                {
+                    path: "/dashboard",
+                    name: "dashboard",
+                    component: Dashboard
+                },
+                {
+                    path: "/spk",
+                    name: "spk",
+                    component: Spk
+                },
+                {
+                    path: "/spk/:id",
+                    name: "spk.show",
+                    component: SpkShow
+                },
+            ]
         },
         {
-            path: '/user-m',
-            name: 'user-m',
-            component: Users
+            path: '/login',
+            name: 'login',
+            component: Login
         },
-        {
-            path: "*",
-            redirect: "/404"
-        },
-        {
-            path: "/404",
-            name: "404",
-        }
 
     ]
 })
