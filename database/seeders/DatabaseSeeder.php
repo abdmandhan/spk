@@ -87,6 +87,13 @@ class DatabaseSeeder extends Seeder
                 'password'  => Hash::make('12341234'),
                 'user_type_id' => 2
             ],
+
+            [
+                'name'      => 'User1',
+                'email'     => 'user1@gmail.com',
+                'password'  => Hash::make('12341234'),
+                'user_type_id' => 1
+            ],
         ];
 
         User::insert($data);
