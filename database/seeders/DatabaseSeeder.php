@@ -67,7 +67,6 @@ class DatabaseSeeder extends Seeder
 
         UserType::insert($user_type);
 
-        // \App\Models\User::factory(10)->create();
         $data = [
             [
                 'name'      => 'Falyan Zuril',
@@ -76,15 +75,15 @@ class DatabaseSeeder extends Seeder
                 'user_type_id' => 2
             ],
             [
-                'name'      => 'Abdurrahman Ramadhan',
-                'email'     => 'abdmandhan@gmail.com',
+                'name'      => 'Muhamad Lutfi Wildan',
+                'email'     => 'lutfi@gmail.com',
                 'password'  => Hash::make('12341234'),
                 'user_type_id' => 2
             ],
 
             [
-                'name'      => 'Agus Vany',
-                'email'     => 'agusvany@gmail.com',
+                'name'      => 'Miftah Irfan Basuki',
+                'email'     => 'miftah@gmail.com',
                 'password'  => Hash::make('12341234'),
                 'user_type_id' => 2
             ],
