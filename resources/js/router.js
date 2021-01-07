@@ -6,6 +6,8 @@ import Spk from './components/spk/SpkComponent';
 import SpkShow from './components/spk/SpkShowComponent';
 import Layout from './components/LayoutComponent';
 import Login from './components/auth/LoginComponent';
+import Aplikom from './components/auth/LoginComponent';
+
 
 Vue.use(VueRouter);
 
@@ -39,6 +41,11 @@ const router = new VueRouter({
             path: '/login',
             name: 'login',
             component: Login
+        },
+        {
+            path: '/aplikom',
+            name: 'aplikom',
+            component: Aplikom
         },
 
     ]
